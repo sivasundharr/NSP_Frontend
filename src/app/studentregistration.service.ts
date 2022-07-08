@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { StudentloginService } from './studentlogin.service';
 import { Studentregis } from './studentregis';
 
 @Injectable({
