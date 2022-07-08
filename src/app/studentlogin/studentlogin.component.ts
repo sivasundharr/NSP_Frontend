@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Student } from '../student';
-
 @Component({
   selector: 'app-studentlogin',
   templateUrl: './studentlogin.component.html',
@@ -23,12 +21,11 @@ export class StudentloginComponent implements OnInit {
   }
 
   checkLogin() {
-    let dealer={
+    let student={
       "email":this.username,
       "password":this.password
     }
-    const header= {'Content-Type':'application/json'};
-    this.loginService.login(dealer).subscribe((response) => {
+    this.loginService.login(student).subscribe((response) => {
       console.log(response);
       if(response)
       {

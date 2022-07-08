@@ -3,8 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Institution } from '../institution';
 import { InstitutionregistrationService } from '../institutionregistration.service';
-import { Student } from '../student';
-import { Studentregis } from '../studentregis';
+import { student } from '../student';
 import { StudentregistrationService } from '../studentregistration.service';
 
 @Component({
@@ -28,16 +27,15 @@ export class StudentregistrationComponent implements OnInit {
     'dob':new FormControl('',Validators.required),
     'gender':new FormControl('',Validators.required),
     'mobileNumber':new FormControl('',Validators.required),
-    'email':new FormControl('',Validators.required),
+    'email':new FormControl('',Validators.compose([Validators.email, Validators.required])),
     'institutionCode':new FormControl('',Validators.required),
     'aadharNumber':new FormControl('',Validators.required),
     'ifsc':new FormControl('',Validators.required),
     'accountno':new FormControl('',Validators.required),
     'bankname':new FormControl('',Validators.required),
-    'setPassword':new FormControl('',Validators.required),
-    'confirmPassword':new FormControl('',Validators.required)
+    'password':new FormControl('',Validators.required),
   });
-  student:Studentregis=new Studentregis();
+  student:student=new student();
   saveStudent()
   {
       this.student=this.form.value;

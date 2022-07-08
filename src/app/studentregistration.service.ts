@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Studentregis } from './studentregis';
+import { student } from './student';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ getStudent()
 {
   return this.myhttp.get(this.restURL+"/register-student")
 }
-addStudent(add:Studentregis)
+addStudent(add:student)
 {
   console.log(add);
   return this.myhttp.post(this.restURL+"/register-student",add)

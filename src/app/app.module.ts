@@ -16,9 +16,7 @@ import { InstitutionhomeComponent } from './institutionhome/institutionhome.comp
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { DisplayComponent } from './display/display.component';
-import { ScholarapplicationComponent } from './scholarapplication/scholarapplication.component';
-import { StudentapplicationsComponent } from './studentapplications/studentapplications.component';
-import { InstituteapplicationsComponent } from './instituteapplications/instituteapplications.component'
+import { ScholarapplicationComponent } from './scholarapplication/scholarapplication.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,8 +33,6 @@ import { InstituteapplicationsComponent } from './instituteapplications/institut
     AboutComponent,
     DisplayComponent,
     ScholarapplicationComponent,
-    StudentapplicationsComponent,
-    InstituteapplicationsComponent
   ],
   imports: [
     BrowserModule,

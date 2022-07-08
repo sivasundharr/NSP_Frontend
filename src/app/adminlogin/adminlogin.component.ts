@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Admin } from '../admin';
 import { AdminloginService } from '../adminlogin.service';
-import { Student } from '../student';
+import { student } from '../student';
 
 @Component({
   selector: 'app-adminlogin',
