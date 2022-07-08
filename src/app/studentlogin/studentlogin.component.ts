@@ -27,6 +27,7 @@ export class StudentloginComponent implements OnInit {
       "email":this.username,
       "password":this.password
     }
+    const header= {'Content-Type':'application/json'};
     this.loginService.login(dealer).subscribe((response) => {
       console.log(response);
       if(response)
