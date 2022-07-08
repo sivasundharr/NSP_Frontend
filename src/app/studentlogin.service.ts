@@ -8,12 +8,12 @@ export class StudentloginService {
   response:any;
 
   constructor(private myhttp:HttpClient) { }
-  restURL:string="http://localhost:8989/student-registration";
+  restURL:string="http://localhost:8989/Students";
   login(add:any):Observable<any>
   {
     //return this.myhttp.get();
     const header1= {'Content-Type':'application/json',};
-    return this.myhttp.get<any>(this.restURL+"/login?Email="+add.Email+"&password="+add.password,
+    return this.myhttp.get<any>(this.restURL+""+"",
     {
         headers: header1,
         observe: 'response',
