@@ -10,11 +10,11 @@ export class ScholarshipapplicationService {
   constructor(private myhttp:HttpClient) { }
   restUrl:string="http://localhost:8989";
 
-  getBasicDetails(){
-    return this.myhttp.get(this.restUrl+"/AllBasicDetails")
+  getStudent(){
+    return this.myhttp.get(this.restUrl+"/student")
   }
 
-  addBasicDetails(add:BasicDetails){
-    return this.myhttp.post(this.restUrl+"/scholarshipapplicalionDetails",add)
+  addStudent(add:BasicDetails){
+    return this.myhttp.post(this.restUrl+"/studentapplication",add)
   }
 }

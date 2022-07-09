@@ -22,7 +22,7 @@ export class ScholarapplicationComponent implements OnInit {
     this.basicDetails=basicDetailsForm.value;
     console.log(basicDetailsForm.value);
     console.log(this.basicDetails);
-    this.bas.addBasicDetails(this.basicDetails).subscribe(
+    this.bas.addStudent(this.basicDetails).subscribe(
       (data)=>{
         console.log(data);
         console.log("Persisted");

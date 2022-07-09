@@ -16,7 +16,8 @@ import { InstitutionhomeComponent } from './institutionhome/institutionhome.comp
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { DisplayComponent } from './display/display.component';
-import { ScholarapplicationComponent } from './scholarapplication/scholarapplication.component'
+import { ScholarapplicationComponent } from './scholarapplication/scholarapplication.component';
+import { StudentapplicationsComponent } from './studentapplications/studentapplications.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { ScholarapplicationComponent } from './scholarapplication/scholarapplica
     AboutComponent,
     DisplayComponent,
     ScholarapplicationComponent,
+    StudentapplicationsComponent,
   ],
   imports: [
     BrowserModule,

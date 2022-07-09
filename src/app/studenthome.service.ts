@@ -10,6 +10,6 @@ export class StudenthomeService {
   restURL:string="http://localhost:8989/Home"
   ShowDetails(Email:String)
   {
-    return this.myhttp.get(this.restURL+"/StudentHome/${Email}");
+    return this.myhttp.get(this.restURL+"/StudentHome/${email}");
   }
 }
