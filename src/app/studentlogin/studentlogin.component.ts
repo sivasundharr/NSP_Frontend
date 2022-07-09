@@ -41,7 +41,7 @@ export class StudentloginComponent implements OnInit {
         sessionStorage.setItem('email', this.email)
         this.invalidLogin = false;
         this.loginSuccess = true;
-        this.router.navigate(['']);
+        this.router.navigate(['/studenthome']);
         this.successMessage = 'Login Successful.';
       }
       else{
