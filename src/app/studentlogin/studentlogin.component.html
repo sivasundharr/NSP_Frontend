@@ -3,7 +3,7 @@
     <div class="shadow p-3 mb-5 bg-body rounded">
         <div class="row">
             <h2>STUDENT LOGIN</h2>
-            <form class="row g-3" (ngSubmit)="checkLogin()">
+            <form [formGroup]="form" class="row g-3" (ngSubmit)="checkLogin()">
                 <div class="col-4">
                     <label for="email" class="form-label">Registered Email</label>
                     <input formControlName="email" type="text" class="form-control" [(ngModel)]="email" name="email" placeholder="Enter email" >

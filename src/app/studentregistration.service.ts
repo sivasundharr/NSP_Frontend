@@ -12,12 +12,12 @@ export class StudentregistrationService {
 restURL:string="http://localhost:8989";
 getStudent()
 {
-  return this.myhttp.get(this.restURL+"/register-student")
+  return this.myhttp.get(this.restURL+"/registerstudent")
 }
 addStudent(add:student)
 {
   console.log(add);
-  return this.myhttp.post(this.restURL+"/register-student",add)
+  return this.myhttp.post(this.restURL+"/registerstudent",add)
 }
 
 }
