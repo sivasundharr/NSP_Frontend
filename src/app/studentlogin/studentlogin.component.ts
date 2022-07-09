@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./studentlogin.component.css']
 })
 export class StudentloginComponent implements OnInit {
-  username = ''
+  email = ''
   password = ''
   invalidLogin = false
   errorMessage = 'Invalid Credentials';
@@ -22,15 +22,15 @@ export class StudentloginComponent implements OnInit {
 
   checkLogin() {
     let student={
-      "email":this.username,
+      "email":this.email,
       "password":this.password
     }
     this.loginService.login(student).subscribe((response) => {
       console.log(response);
       if(response)
       {
-        this.router.navigate(['']);
-        sessionStorage.setItem('username', this.username)
+        this.router.navigate(['/studenthome']);
+        sessionStorage.setItem('email', this.email)
         this.invalidLogin = false;
         this.loginSuccess = true;
         this.successMessage = 'Login Successful.';
