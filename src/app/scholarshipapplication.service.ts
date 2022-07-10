@@ -15,6 +15,6 @@ export class ScholarshipapplicationService {
   }
 
   addStudent(add:applicationDetails){
-    return this.myhttp.post(this.restUrl+"/studentapplication",add)
+    return this.myhttp.post(this.restUrl+"/applystudent",add)
   }
 }
