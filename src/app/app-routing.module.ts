@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { DisplayComponent } from './display/display.component';
 import { ScholarapplicationComponent } from './scholarapplication/scholarapplication.component';
+import { StudentapplicationsComponent } from './studentapplications/studentapplications.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'studentlogin',component:StudentloginComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:'institutionhome',component:InstitutionhomeComponent},
   {path:'institutionlogin',component:InstitutionloginComponent},
   {path:'institutionregistration',component:InstitutionregistrationComponent},
+  {path:'studentapplications',component:StudentapplicationsComponent},
   {path:'studentregistration',component:StudentregistrationComponent},
   {path:'Display',component:DisplayComponent},
   {path:'scholarshipapplication',component:ScholarapplicationComponent}
