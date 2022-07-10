@@ -11,24 +11,16 @@ import { StudenthomeService } from '../studenthome.service';
 })
 export class StudenthomeComponent implements OnInit {
 
-  constructor(private add:StudenthomeService,private myRouter:Router) { }
-logedin:any;
+  constructor(private stu:StudenthomeService,private myRouter:Router) { }
+username:any;
 studentData:any;
   ngOnInit(): void 
   {
-    this.logedin=sessionStorage.getItem("userlogedIn");
-    this.add.ShowDetails(this.logedin).subscribe(
+    this.username=sessionStorage.getItem("email");
+    this.stu.ShowDetails(this.username).subscribe(
       (data)=>{
         console.log(data);
         this.studentData=data;
-       if(this.studentData.scheme==null)
-       {
-         this.studentData.Fixscheme=this.studentData.girlscheme;
-       }
-       else
-       {
-        this.studentData.Fixscheme=this.studentData.scheme;
-       }
       },
       (error)=>
       {
@@ -36,6 +28,7 @@ studentData:any;
       }
     )
   }
+
   }
  
 
