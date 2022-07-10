@@ -17,7 +17,8 @@ import { AboutComponent } from './about/about.component';
 import { DisplayComponent } from './display/display.component';
 import { ScholarapplicationComponent } from './scholarapplication/scholarapplication.component';
 import { StudentapplicationsComponent } from './studentapplications/studentapplications.component';
-import { MinistryComponent } from './ministry/ministry.component'
+import { MinistryComponent } from './ministry/ministry.component';
+import { NodalofficerComponent } from './nodalofficer/nodalofficer.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { MinistryComponent } from './ministry/ministry.component'
     ScholarapplicationComponent,
     StudentapplicationsComponent,
     MinistryComponent,
+    NodalofficerComponent,
   ],
   imports: [
     BrowserModule,
