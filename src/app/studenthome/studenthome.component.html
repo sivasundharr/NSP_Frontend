@@ -11,7 +11,7 @@
     <table style="width:100%">
         <tr >
           <th> Name:</th>
-          <td>{{UserData.name}}</td>
+          <td>{{studentData.name}}</td>
           </tr>
           <tr>
           <th>Email:</th>
@@ -19,26 +19,16 @@
         </tr>
         <tr>
             <th>10th Percentage:</th>
-            <td>{{UserData.tenthper}}</td>
+            <td>{{studentData.tenthper}}</td>
             </tr>
         <tr>
             <th>12th Percentage:</th>
-            <td>{{UserData.twelper}}</td>
+            <td>{{studentData.twelper}}</td>
             </tr>
       </table>
     
 </div>
-  <style>th {
-        text-align: left;
-      }
-      table, th, td {
-      border: 1px solid white;
-      border-collapse: collapse;
-    }
-    th, td {
-      background-color: #96D4D4;
-    }</style>
-    
+  
     <div class="table1">
     <h2>Eligible Scholarship</h2> 
     <table style="width:100%">
@@ -46,7 +36,7 @@
          <th>Eligible Scholarships</th>
          <th>Apply for Scholarship</th>
         </tr>
-        <td>{{UserData.Fixscheme}}</td>
+        <td>{{studentData.Fixscheme}}</td>
         <td><button type="button"  class="btn btn-primary" routerLink="/scholarshipapplication">Apply</button>
      </table>
     </div>

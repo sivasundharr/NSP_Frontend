@@ -13,21 +13,21 @@ export class StudenthomeComponent implements OnInit {
 
   constructor(private add:StudenthomeService,private myRouter:Router) { }
 logedin:any;
-UserData:any;
+studentData:any;
   ngOnInit(): void 
   {
     this.logedin=sessionStorage.getItem("userlogedIn");
     this.add.ShowDetails(this.logedin).subscribe(
       (data)=>{
         console.log(data);
-        this.UserData=data;
-       if(this.UserData.scheme==null)
+        this.studentData=data;
+       if(this.studentData.scheme==null)
        {
-         this.UserData.Fixscheme=this.UserData.girlscheme;
+         this.studentData.Fixscheme=this.studentData.girlscheme;
        }
        else
        {
-        this.UserData.Fixscheme=this.UserData.scheme;
+        this.studentData.Fixscheme=this.studentData.scheme;
        }
       },
       (error)=>
