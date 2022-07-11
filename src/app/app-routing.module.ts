@@ -16,6 +16,7 @@ import { ScholarapplicationComponent } from './scholarapplication/scholarapplica
 import { StudentapplicationsComponent } from './studentapplications/studentapplications.component';
 import { NodalofficerComponent } from './nodalofficer/nodalofficer.component';
 import { MinistryhomeComponent } from './ministryhome/ministryhome.component';
+import { InstituteapplicationsComponent } from './instituteapplications/instituteapplications.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'studentlogin',component:StudentloginComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path:'institutionhome',component:InstitutionhomeComponent},
   {path:'institutionlogin',component:InstitutionloginComponent},
   {path:'institutionregistration',component:InstitutionregistrationComponent},
+  {path:'instituteapplications',component:InstituteapplicationsComponent},
   {path:'studentapplications',component:StudentapplicationsComponent},
   {path:'studentregistration',component:StudentregistrationComponent},
   {path:'Display',component:DisplayComponent},
