@@ -14,14 +14,10 @@ export class InstitutionloginComponent implements OnInit {
   constructor(private add:InstitutionloginService,private myrouter:Router) { }
 
   ngOnInit(): void {}
-  user:any;
-  Institution: Institution=new Institution();
-  loginValues:any;
-  loginpass:any;
-  loginValid:any;
+  
   
   form=new FormGroup({
-    'loginid':new FormControl('',Validators.required),
+    'email':new FormControl('',Validators.required),
     'password':new FormControl('',Validators.required)
   });
   login()
