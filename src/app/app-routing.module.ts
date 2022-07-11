@@ -15,6 +15,7 @@ import { DisplayComponent } from './display/display.component';
 import { ScholarapplicationComponent } from './scholarapplication/scholarapplication.component';
 import { StudentapplicationsComponent } from './studentapplications/studentapplications.component';
 import { NodalofficerComponent } from './nodalofficer/nodalofficer.component';
+import { MinistryhomeComponent } from './ministryhome/ministryhome.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'studentlogin',component:StudentloginComponent},
@@ -31,7 +32,8 @@ const routes: Routes = [
   {path:'Display',component:DisplayComponent},
   {path:'scholarshipapplication',component:ScholarapplicationComponent},
   {path:'ministry',component:MinistryComponent},
-  {path:'nodalofficer',component:NodalofficerComponent}
+  {path:'nodalofficer',component:NodalofficerComponent},
+  {path:'ministryhome',component:MinistryhomeComponent}
 ];
 
 @NgModule({

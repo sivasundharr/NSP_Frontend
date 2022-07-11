@@ -4,13 +4,12 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class StudentapplicationsService {
+export class MinistryhomeService {
 
   constructor(private myhttp:HttpClient) { }
-
   restURL:string="http://localhost:8989/"
-  ShowDetails(email:String)
+  ShowDetails(id:String)
   {
-    return this.myhttp.get(`${this.restURL}candidate/`+`${email}`);
+    return this.myhttp.get(`${this.restURL}ministry/`+`${id}`);
   }
 }
