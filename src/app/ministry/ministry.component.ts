@@ -33,7 +33,7 @@ export class MinistryComponent implements OnInit {
       "ministryId":this.ministryId,
       "password":this.password
     }
-    this.loginService.ministrylogin(this.ministry).subscribe((response: any) => {
+    this.loginService.ministrylogin(ministry).subscribe((response) => {
       console.log(response);
       if(response)
       {
