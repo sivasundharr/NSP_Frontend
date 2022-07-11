@@ -19,10 +19,19 @@ export class AuthenticationService {
   {
     return this.http.post("http://localhost:8989/loginstudent",student);
   }
+  nodallogin(student:any):Observable<any>
+  {
+    return this.http.post("http://localhost:8989/nodallogin",student);
+  }
 
   ministrylogin(ministry:any):Observable<any>
   {
     return this.http.post("http://localhost:8989/loginministry",ministry);
+  }
+
+  institutelogin(institute:any):Observable<any>
+  {
+    return this.http.post("http://localhost:8989/institutionlogin",institute);
   }
 
   isUserLoggedIn() {

@@ -38,7 +38,7 @@ export class NodalofficerComponent implements OnInit {
       "password":this.password
     }
 
-    this.loginService.login(nodal).subscribe((response) => {
+    this.loginService.nodallogin(nodal).subscribe((response) => {
       console.log(response);
       if(response)
       {

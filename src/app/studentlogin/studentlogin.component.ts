@@ -51,7 +51,7 @@ export class StudentloginComponent implements OnInit {
  
     this.loginSuccess = false;
   }
-
+}
 
 
 
@@ -102,4 +102,4 @@ export class StudentloginComponent implements OnInit {
           }
       })
   }*/
-}
+

@@ -1,7 +1,7 @@
-import { Ministry } from './ministry';
+import { ministry } from './ministry';
 
 describe('Ministry', () => {
   it('should create an instance', () => {
-    expect(new Ministry()).toBeTruthy();
+    expect(new ministry()).toBeTruthy();
   });
 });

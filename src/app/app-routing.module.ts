@@ -7,6 +7,7 @@ import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { InstitutionhomeComponent } from './institutionhome/institutionhome.component';
 import { InstitutionloginComponent } from './institutionlogin/institutionlogin.component';
 import { InstitutionregistrationComponent } from './institutionregistration/institutionregistration.component';
+import { InstituteapplicationsComponent } from './instituteapplications/instituteapplications.component';
 import { StudentregistrationComponent } from './studentregistration/studentregistration.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
@@ -16,7 +17,7 @@ import { ScholarapplicationComponent } from './scholarapplication/scholarapplica
 import { StudentapplicationsComponent } from './studentapplications/studentapplications.component';
 import { NodalofficerComponent } from './nodalofficer/nodalofficer.component';
 import { MinistryhomeComponent } from './ministryhome/ministryhome.component';
-import { InstituteapplicationsComponent } from './instituteapplications/instituteapplications.component';
+import { NodalhomeComponent } from './nodalhome/nodalhome.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'studentlogin',component:StudentloginComponent},
@@ -34,8 +35,9 @@ const routes: Routes = [
   {path:'Display',component:DisplayComponent},
   {path:'scholarshipapplication',component:ScholarapplicationComponent},
   {path:'ministry',component:MinistryComponent},
-  {path:'nodalofficer',component:NodalofficerComponent},
-  {path:'ministryhome',component:MinistryhomeComponent}
+  {path:'nodallogin',component:NodalofficerComponent},
+  {path:'ministryhome',component:MinistryhomeComponent},
+  {path:"nodalhome",component:NodalhomeComponent}
 ];
 
 @NgModule({
