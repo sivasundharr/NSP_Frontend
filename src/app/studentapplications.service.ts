@@ -9,8 +9,8 @@ export class StudentapplicationsService {
   constructor(private myhttp:HttpClient) { }
 
   restURL:string="http://localhost:8989/"
-  ShowDetails()
+  ShowDetails(email:String)
   {
-    return this.myhttp.get(`${this.restURL}/Studentapplication`);
+    return this.myhttp.get(`${this.restURL}getAllpplications`);
   }
 }
