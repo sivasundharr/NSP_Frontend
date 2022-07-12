@@ -20,11 +20,8 @@ import { StudentapplicationsComponent } from './studentapplications/studentappli
 import { MinistryComponent } from './ministry/ministry.component';
 import { NodalofficerComponent } from './nodalofficer/nodalofficer.component';
 import { MinistryhomeComponent } from './ministryhome/ministryhome.component';
-<<<<<<< HEAD
 import { InstituteapplicationsComponent } from './instituteapplications/instituteapplications.component'
-=======
 import { NodalhomeComponent } from './nodalhome/nodalhome.component'
->>>>>>> 8b058bc34dba6d4fd2583fb4347fe3b447328a4b
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,11 +41,8 @@ import { NodalhomeComponent } from './nodalhome/nodalhome.component'
     MinistryComponent,
     NodalofficerComponent,
     MinistryhomeComponent,
-<<<<<<< HEAD
     InstituteapplicationsComponent,
-=======
     NodalhomeComponent,
->>>>>>> 8b058bc34dba6d4fd2583fb4347fe3b447328a4b
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h2>Product List</h2>
+      <h2>STUDENT APPLICATIONS List</h2>
     </div>
     <div class="panel-body">
       <table class="table table-striped">
@@ -16,7 +16,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let student of stuapplications">
             <td>{{ stuapplications.aadharNumber }}</td>
             <td>{{ stuapplications.ShowDetails }}</td>
             <td>{{ stuapplications.brand }}</td>
@@ -36,4 +36,5 @@
         </tbody>
       </table>
     </div>
+    <button><a>Load Application</a></button>
   </div>
