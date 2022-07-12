@@ -21,7 +21,7 @@ export class StudentapplicationsComponent implements OnInit {
 
   ngOnInit(): void {
     this.reloadData();
-    this.StudentApplication=sessionStorage.getItem("aadhar");
+    this.StudentApplication=sessionStorage.getItem("");
     /*this.stu.ShowDetails(this.StudentApplication).subscribe(
       (data)=>{
         console.log(data);

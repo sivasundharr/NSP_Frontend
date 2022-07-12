@@ -16,7 +16,7 @@ export class InstituteapplicationsComponent implements OnInit {
 
   ngOnInit(): void {
     this.stuapplications=sessionStorage.getItem("aadhar");
-    this.stu.ShowDetails(this.stuapplications).subscribe(
+    /*this.stu.ShowDetails(this.stuapplications).subscribe(
       (data)=>{
         console.log(data);
         this.stuapplications=data;
@@ -25,7 +25,7 @@ export class InstituteapplicationsComponent implements OnInit {
       {
         console.log(error);
       }
-    )
+    )*/
   }
 
 }
