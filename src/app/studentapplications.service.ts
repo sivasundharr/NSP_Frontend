@@ -11,6 +11,6 @@ export class StudentapplicationsService {
   restURL:string="http://localhost:8989/"
   ShowDetails(email:String)
   {
-    return this.myhttp.get(`${this.restURL}getAllpplications`);
+    return this.myhttp.get(`${this.restURL}candidate/`+`${email}`);
   }
 }
