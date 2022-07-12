@@ -1,16 +1,22 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { applicationDetails } from './scholarshipapplicationdetails';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentapplicationsService {
-
-  constructor(private myhttp:HttpClient) { }
-
-  restURL:string="http://localhost:8989/"
-  ShowDetails(email:String)
-  {
-    return this.myhttp.get(`${this.restURL}candidate/`+`${email}`);
+  restURL: string;
+  constructor(private myhttp:HttpClient) {
+    this.restURL="http://localhost:8989/"
+  
+   }
+   getapplicationList(): Observable<any> {
+    return this.myhttp.get(`${this.restURL}Studentapplication`);
   }
+  //ShowDetails(email:String)
+  //{
+  //  return this.myhttp.get(`${this.restURL}candidate/`+`${email}`);
+  //}
 }
