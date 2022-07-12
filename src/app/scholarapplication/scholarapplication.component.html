@@ -2,6 +2,10 @@
       <h1>SCHOLARSHIP APPLICATION DETAILS</h1>
       <form class="row g-3" #scholarshipapplicationdetails="ngForm" (ngSubmit)="savescholarshipDetails(scholarshipapplicationdetails)">
         <div class="col-4">
+          <label for="inputEmail" class="form-label">Full Name</label>
+          <input type="text" name="name" class="form-control" id="name" placeholder="" ngModel >
+        </div>
+        <div class="col-4">
           <label for="inputEmail" class="form-label">Registered Email</label>
           <input type="text" name="email" class="form-control" id="email" placeholder="" ngModel >
         </div>

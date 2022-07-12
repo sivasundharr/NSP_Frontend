@@ -11,9 +11,8 @@ import { StudentapplicationsService } from '../studentapplications.service';
 })
 export class StudentapplicationsComponent implements OnInit {
 
-  StudentApplication:any
+  Studentapplication:any
   ShowDetails:any;
-  applications : Observable<applicationDetails[]> | any;
   restURL: string;
   constructor(private stu:StudentapplicationsService,private myRouter:Router) {
     this.restURL="http://localhost:8989/"
@@ -21,20 +20,10 @@ export class StudentapplicationsComponent implements OnInit {
 
   ngOnInit(): void {
     this.reloadData();
-    this.StudentApplication=sessionStorage.getItem("");
-    /*this.stu.ShowDetails(this.StudentApplication).subscribe(
-      (data)=>{
-        console.log(data);
-        this.StudentApplication=data;
-      },
-      (error)=>
-      {
-        console.log(error);
-      }
-    )*/
+    
   }
   reloadData() {
-    this.applications=this.stu.getapplicationList();
+    this.Studentapplication=this.stu.getapplicationList();
   }
 
 }
