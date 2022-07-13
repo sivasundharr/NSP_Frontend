@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { InstituteapplicationService } from '../instituteapplication.service';
 import { StudentapplicationsService } from '../studentapplications.service';
 
 @Component({
@@ -9,23 +10,21 @@ import { StudentapplicationsService } from '../studentapplications.service';
 })
 export class InstituteapplicationsComponent implements OnInit {
 
-  stuapplications:any
+  Instituteapplication:any
   ShowDetails:any;
-
-  constructor(private stu:StudentapplicationsService,private myRouter:Router) { }
-
-  ngOnInit(): void {
-    this.stuapplications=sessionStorage.getItem("aadhar");
-    /*this.stu.ShowDetails(this.stuapplications).subscribe(
-      (data)=>{
-        console.log(data);
-        this.stuapplications=data;
-      },
-      (error)=>
-      {
-        console.log(error);
-      }
-    )*/
+  restURL: string;
+  
+  constructor(private inst:InstituteapplicationService,private myRouter:Router) {
+    this.restURL="http://localhost:8989/"
+   }
+   
+   ngOnInit(): void {
+    this.reloadData();
+    
+  }
+  
+   reloadData() {
+      this.Instituteapplication=this.inst.getapplicationList();
+    }
   }
 
-}

@@ -22,6 +22,7 @@ export class StudentapplicationsComponent implements OnInit {
     this.reloadData();
     
   }
+  
   reloadData() {
     this.Studentapplication=this.stu.getapplicationList();
   }
