@@ -8,7 +8,7 @@ export class InstituteapplicationService {
   
   
   getapplicationList(): any {
-    return this.myhttp.get(`${this.restURL}Instituteapplication`);
+    return this.myhttp.get(`${this.restURL}instituteapplications`);
   }
   restURL: string;
   constructor(private myhttp:HttpClient) {
