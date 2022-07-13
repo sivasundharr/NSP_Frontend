@@ -1,29 +1,30 @@
 
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h2 align="center">Institute Applications List</h2>
+      <h2>INSTITUTE APPLICATION LIST</h2>
     </div>
+    <hr>
     <div class="panel-body">
       <table class="table table-striped">
         <thead>
           <tr>
+            <th>Institute Id</th>
             <th>Institute Name</th>
-            <th>Institute Code</th>
-            <th>Institute Address</th>
+            <th>Location</th>
             <th>Institute State</th>
             <th>Institute Email</th>
-            <th>Pinciple Name</th>
-            <th>Status</th>
+            <th>Affiliated University Name</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let institute of instituteapplications | async">
-            <td>{{ institute.name }}</td>
-            <td>{{ institute.institutionCode }}</td>
-            <td>{{ institute.location }}, {{ institute.district }} District</td>
-            <td>{{ institute.state }}</td>
-            <td>{{ institute.email }}</td>
-            <td>{{ institute.principleName }}</td>
+          <tr *ngFor="let application of Instituteapplication | async">
+            
+            <td>{{ application.institutionCode }}</td>
+            <td>{{ application.name }}</td>
+            <td>{{ application.location }}</td>
+            <td>{{ application.instState }}</td>
+            <td>{{ application.email }}</td>
+            <td>{{ application.affilatedUniversityBoardName }}</td>
             
             <td>
                 

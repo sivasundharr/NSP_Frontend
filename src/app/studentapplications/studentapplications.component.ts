@@ -21,6 +21,7 @@ export class StudentapplicationsComponent implements OnInit {
   ngOnInit(): void {
     this.reloadData();
   }
+  
   reloadData() {
     this.Studentapplication=this.stu.getapplicationList();
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { InstituteapplicationsService } from '../instituteapplications.service';
+import { InstituteapplicationService } from '../instituteapplication.service';
+import { StudentapplicationsService } from '../studentapplications.service';
 
 @Component({
   selector: 'app-instituteapplications',
@@ -9,19 +10,21 @@ import { InstituteapplicationsService } from '../instituteapplications.service';
 })
 export class InstituteapplicationsComponent implements OnInit {
 
-  instituteapplications:any
+  Instituteapplication:any
+  ShowDetails:any;
   restURL: string;
-
-  constructor(private inst:InstituteapplicationsService,private myRouter:Router) {
+  
+  constructor(private inst:InstituteapplicationService,private myRouter:Router) {
     this.restURL="http://localhost:8989/"
    }
-
-  ngOnInit(): void {
+   
+   ngOnInit(): void {
     this.reloadData();
     
   }
-  reloadData() {
-    this.instituteapplications=this.inst.getInstitutesList();
+  
+   reloadData() {
+      this.Instituteapplication=this.inst.getapplicationList();
+    }
   }
 
-}
