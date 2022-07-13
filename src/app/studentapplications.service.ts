@@ -14,6 +14,11 @@ export class StudentapplicationsService {
    getapplicationList(): Observable<any> {
     return this.myhttp.get(`${this.restURL}Studentapplication`);
   }
+
+  updateStatus(aadhar:string):Observable<Object>{
+    
+    return this.myhttp.put(`${this.restURL}ministry/applications/${aadhar}`,true);
+  }
   //ShowDetails(email:String)
   //{
   //  return this.myhttp.get(`${this.restURL}candidate/`+`${email}`);

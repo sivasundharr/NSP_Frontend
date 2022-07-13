@@ -1,41 +1,60 @@
 
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h2 align="center" >STUDENT APPLICATIONS LIST</h2>
-    </div>
-    <div class="panel-body">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Student Id</th>
-            <th>Student Name</th>
-            <th>Gender</th>
-            <th>Student State</th>
-            <th>Student Email</th>
-            <th>College Name</th>
-            <th>Full Details</th>
-            <th>ACTIONS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let application of Studentapplication | async">
-            <td>{{ application.aadhar }}</td>
-            <td>{{ application.name }}</td>
-            <td>{{ application.gender }}</td>
-            <td>{{ application.state }}</td>
-            <td>{{ application.email }}</td>
-            <td>{{ application.institution }}</td>
-            <td><a class="button" routerLink="/studentreadmore" style="color:black">ReadMore</a></td>
-            
-            <td>
-                
-              <button class="btn btn-success" style="margin-left: 10px">APPROVE</button>
-
-              <button class="btn btn-danger" style="margin-left: 30px">DENY</button>
-            </td>
-           
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<!---->
+<h1 style="color:black;">STUDENT APPLICATION DETAILS</h1>
+<hr>
+<h3>BASIC DETAILS</h3><br>
+<div class="container" *ngFor="let application of Studentapplication | async">
+    <form class="row"> 
+        <div class="col-md-10">
+            <div class="col-md-4" >
+                <label for="inputState" class="form-label">STATE OF DOMICILE : {{application.state}}</label>
+            </div>
+               <label for="inputDistrict" class="form-label">DISTRICT : {{application.district}}</label>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="inputName" class="form-label">Name (AS IN MARKS SHEETS) : {{application.name}}</label>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="col-md-4">
+            <label for="inputDOB" class="form-label"> DOB : {{application.dob}}</label>
+        </div>
+        <div class="col-md-4">
+            <label for="inputGender" class="form-label">GENDER : {{application.gender}}</label>
+        </div>
+        <div class="col-md-4">
+            <label for="inputMobileNumber" class="form-label">MOBILE NUMBER: {{application.phoneNumber}}</label>
+        </div>
+        <div  class="row">
+            <div class="col-md-4">
+                <label for="inputEmail" class="form-label">EMAIL : {{application.email}}</label>
+            </div>
+            <div class="col-md-6">
+                <label for="inputInstituteCode" class="form-label">INSTITUTE CODE : {{application.email}}</label>
+            </div>
+            <div class="col-md-12">
+                <label for="inputAdharNumber" class="form-label">AADHAR NUMBER :</label>
+            </div>
+        
+            <div class="col-md-8">
+                <label for="inputBankIFSCCode" class="form-label">BANK IFSC CODE :</label>
+            </div>
+            <div class="col-md-8">
+                <label for="inputBankAccountNumber" class="form-label">BANK ACCOUNT NUMBER :</label>
+            </div>
+            <div class="col-md-8">
+                <label for="inputBankName" class="form-label">BANK NAME :</label>
+            </div>
+            <div class="col-md-8">
+                <label for="password" class="form-label">PASSWORD :</label>
+            </div>
+            <div>
+                <button class="btn btn-success" (click)="approve(application.aadhar)">APPROVE</button>
+                <button class="btn btn-danger">DENY</button>
+            </div>
+        </div>
+    </form>
+</div> 
