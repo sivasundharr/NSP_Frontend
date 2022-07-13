@@ -12,9 +12,8 @@ export class StudentapplicationsService {
   
   }
    getapplicationList(): Observable<any> {
-    return this.myhttp.get(`${this.restURL}Studentapplicationministry`);
+    return this.myhttp.get(`${this.restURL}Studentapplication`);
   }
-  
   //ShowDetails(email:String)
   //{
   //  return this.myhttp.get(`${this.restURL}candidate/`+`${email}`);
