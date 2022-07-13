@@ -12,7 +12,7 @@ export class StudentapplicationsService {
   
   }
    getapplicationList(): Observable<any> {
-    return this.myhttp.get(`${this.restURL}Studentapplication`);
+    return this.myhttp.get(`${this.restURL}ministry/Studentapplicationministry`);
   }
 
   updateStatus(aadhar:string):Observable<Object>{

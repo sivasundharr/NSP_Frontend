@@ -25,4 +25,3 @@ export class MinistryhomeComponent implements OnInit {
 function getapplicationList(this: any) {
   return this.myhttp.get(`${this.restURL}Instituteapplication`);
     }
-

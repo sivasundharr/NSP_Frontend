@@ -26,7 +26,7 @@ export class AuthenticationService {
 
   ministrylogin(ministry:any):Observable<any>
   {
-    return this.http.post("http://localhost:8989/loginministry",ministry);
+    return this.http.post("http://localhost:8989/ministry/loginministry",ministry);
   }
 
   institutelogin(institute:any):Observable<any>
