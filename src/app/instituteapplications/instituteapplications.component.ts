@@ -10,8 +10,7 @@ import { StudentapplicationsService } from '../studentapplications.service';
 })
 export class InstituteapplicationsComponent implements OnInit {
 
-  Instituteapplication:any
-  ShowDetails:any;
+  instituteapplication:any
   restURL: string;
   
   constructor(private inst:InstituteapplicationService,private myRouter:Router) {
@@ -24,7 +23,7 @@ export class InstituteapplicationsComponent implements OnInit {
   }
   
    reloadData() {
-      this.Instituteapplication=this.inst.getapplicationList();
+      this.instituteapplication=this.inst.getapplicationList();
     }
   }
 
