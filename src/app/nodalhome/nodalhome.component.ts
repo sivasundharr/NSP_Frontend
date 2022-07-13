@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nodalhome',
@@ -7,11 +6,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./nodalhome.component.css']
 })
 export class NodalhomeComponent implements OnInit {
-nodalId:any;
-
+  
+  nodalId:any;
   constructor() { }
 
   ngOnInit(): void {
+    this.nodalId=sessionStorage.getItem("nodalId");
   }
 
 }

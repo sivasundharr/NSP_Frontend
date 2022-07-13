@@ -21,7 +21,11 @@ import { MinistryComponent } from './ministry/ministry.component';
 import { NodalofficerComponent } from './nodalofficer/nodalofficer.component';
 import { MinistryhomeComponent } from './ministryhome/ministryhome.component';
 import { InstituteapplicationsComponent } from './instituteapplications/instituteapplications.component'
-import { NodalhomeComponent } from './nodalhome/nodalhome.component'
+import { NodalhomeComponent } from './nodalhome/nodalhome.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { StudentreadmoreComponent } from './studentreadmore/studentreadmore.component';
+import { InstitutereadmoreComponent } from './institutereadmore/institutereadmore.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +47,9 @@ import { NodalhomeComponent } from './nodalhome/nodalhome.component'
     MinistryhomeComponent,
     InstituteapplicationsComponent,
     NodalhomeComponent,
+    PagenotfoundComponent,
+    StudentreadmoreComponent,
+    InstitutereadmoreComponent
   ],
   imports: [
     BrowserModule,

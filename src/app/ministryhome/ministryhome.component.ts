@@ -9,28 +9,16 @@ import { MinistryhomeService } from '../ministryhome.service';
   styleUrls: ['./ministryhome.component.css']
 })
 export class MinistryhomeComponent implements OnInit {
+  restURL: string;
 
   constructor(private myhttp:HttpClient,private min:MinistryhomeService,private myRouter:Router) { 
     this.restURL="http://localhost:8989/"
   }
 
   ministryId:any;
-  ministryData:any;
-  restURL: string | undefined;
-  
+
   ngOnInit(): void {
     this.ministryId=sessionStorage.getItem("ministryId");
-    this.min.ShowDetails(this.ministryId).subscribe(
-      (data)=>{
-        console.log(data);
-        this.ministryData=data;
-      },
-      (error)=>
-      {
-        console.log(error);
-      }
-    )
-    getapplicationList()
   }
 
 }

@@ -12,7 +12,7 @@ export class StudentapplicationsService {
   
   }
    getapplicationList(): Observable<any> {
-    return this.myhttp.get(`${this.restURL}Studentapplication`);
+    return this.myhttp.get(`${this.restURL}studentapplicationdetails`);
   }
   //ShowDetails(email:String)
   //{

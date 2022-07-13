@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { applicationDetails } from '../scholarshipapplicationdetails';
 import { StudentapplicationsService } from '../studentapplications.service';
 
 @Component({
@@ -20,7 +18,6 @@ export class StudentapplicationsComponent implements OnInit {
 
   ngOnInit(): void {
     this.reloadData();
-    
   }
   
   reloadData() {
