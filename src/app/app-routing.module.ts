@@ -19,7 +19,6 @@ import { NodalofficerComponent } from './nodalofficer/nodalofficer.component';
 import { MinistryhomeComponent } from './ministryhome/ministryhome.component';
 import { NodalhomeComponent } from './nodalhome/nodalhome.component';
 import { StudentreadmoreComponent } from './studentreadmore/studentreadmore.component';
-import { InstitutereadmoreComponent } from './institutereadmore/institutereadmore.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
@@ -43,7 +42,6 @@ const routes: Routes = [
   {path:'ministryhome',component:MinistryhomeComponent},
   {path:'nodalhome',component:NodalhomeComponent},
   {path:'studentreadmore',component:StudentreadmoreComponent},
-  {path:'institutereadmore',component:InstitutereadmoreComponent},
   {path:'**',component:PagenotfoundComponent}
 ];
 
