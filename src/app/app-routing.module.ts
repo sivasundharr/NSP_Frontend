@@ -18,6 +18,9 @@ import { StudentapplicationsComponent } from './studentapplications/studentappli
 import { NodalofficerComponent } from './nodalofficer/nodalofficer.component';
 import { MinistryhomeComponent } from './ministryhome/ministryhome.component';
 import { NodalhomeComponent } from './nodalhome/nodalhome.component';
+import { StudentreadmoreComponent } from './studentreadmore/studentreadmore.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'studentlogin',component:StudentloginComponent},
@@ -37,7 +40,9 @@ const routes: Routes = [
   {path:'ministry',component:MinistryComponent},
   {path:'nodallogin',component:NodalofficerComponent},
   {path:'ministryhome',component:MinistryhomeComponent},
-  {path:"nodalhome",component:NodalhomeComponent}
+  {path:'nodalhome',component:NodalhomeComponent},
+  {path:'studentreadmore',component:StudentreadmoreComponent},
+  {path:'**',component:PagenotfoundComponent}
 ];
 
 @NgModule({
