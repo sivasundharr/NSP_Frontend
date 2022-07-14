@@ -11,7 +11,7 @@ export class InstituteapplicationService {
       this.restURL="http://localhost:8989/"
   }
   getapplicationList(): any {
-    return this.myhttp.get(`${this.restURL}instituteapplications`);
+    return this.myhttp.get(`${this.restURL}institutes`);
   }
   
 }

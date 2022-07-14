@@ -18,8 +18,8 @@ export class InstituteapplicationsComponent implements OnInit {
    }
    
    ngOnInit(): void {
+    this.instituteapplication=this.inst.getapplicationList();
     this.reloadData();
-    
   }
   
    reloadData() {

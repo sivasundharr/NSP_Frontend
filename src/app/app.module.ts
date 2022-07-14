@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { StudenthomeComponent } from './studenthome/studenthome.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { StudentregistrationComponent } from './studentregistration/studentregistration.component';

@@ -15,7 +15,7 @@ export class InstitutionhomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.institutionCode=sessionStorage.getItem("institutionCode");
-    this.stu.ShowDetails(this.institutionCode).subscribe(
+    this.stu.ShowDetails(this.instituteData.email).subscribe(
       (data)=>{
         console.log(data);
         this.instituteData=data;
