@@ -22,7 +22,7 @@ export class StudentapplicationsComponent implements OnInit {
     this.stu.updateStatus(application,newData)
       .subscribe((data: any) => console.log(data),
         (error: any) => console.log(error));
-        this.reloadData();
+        
   }
 
   remove(application:any){

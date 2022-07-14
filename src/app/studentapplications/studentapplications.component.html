@@ -51,7 +51,7 @@
                 <label for="password" class="form-label">PASSWORD : {{application.password}}</label>
             </div>
             <div *ngIf='application.status==false'>
-                <button class="btn btn-success" (click)="approve(application)" onclick="window.location.reload();">APPROVE</button>
+                <button class="btn btn-success" (click)="approve(application)" >APPROVE</button>
                 <button class="btn btn-danger" (click)="remove(application)" onclick="window.location.reload();">DENY</button>
             </div>
             <div *ngIf='application.status==true'>
