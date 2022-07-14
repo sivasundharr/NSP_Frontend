@@ -14,8 +14,8 @@ export class InstitutionhomeComponent implements OnInit {
   instituteData:any;
 
   ngOnInit(): void {
-    this.institutionCode=sessionStorage.getItem("institutionCode");
-    this.stu.ShowDetails(this.instituteData.email).subscribe(
+    this.institutionCode=sessionStorage.getItem("email");
+    this.stu.ShowDetails(this.institutionCode).subscribe(
       (data)=>{
         console.log(data);
         this.instituteData=data;
@@ -25,6 +25,19 @@ export class InstitutionhomeComponent implements OnInit {
         console.log(error);
       }
     )
+    /*
+     this.username=sessionStorage.getItem("email");
+    this.stu.ShowDetails(this.username).subscribe(
+      (data)=>{
+        console.log(data);
+        this.studentData=data;
+      },
+      (error)=>
+      {
+        console.log(error);
+      }
+    )
+    */ 
   }
 
 }

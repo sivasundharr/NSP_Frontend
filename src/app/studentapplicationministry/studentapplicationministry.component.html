@@ -8,6 +8,8 @@
     <h1>SCHOLARSHIP APPLICATION DETAILS</h1>
     <hr><br>
     <form class="row g-3" *ngFor="let application of Studentapplication | async">
+        <details>
+            <summary>Details Of {{application.name}}</summary>
       <div class="col-4">
         <label for="inputEmail" class="form-label">Full Name: {{application.name}}</label>
       </div>
@@ -159,6 +161,7 @@
             <h2 style="color: green;">Approved</h2>
         </div>
         <br><br><hr>
+    </details>
     </form>
 </div>
 

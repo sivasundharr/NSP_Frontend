@@ -29,7 +29,7 @@ export class StudentregistrationComponent implements OnInit {
     'mobileNumber':new FormControl('',Validators.required),
     'email':new FormControl('',Validators.compose([Validators.email, Validators.required])),
     'institutionCode':new FormControl('',Validators.required),
-    'aadharNumber':new FormControl('',Validators.required),
+    'aadhar':new FormControl('',Validators.required),
     'ifsc':new FormControl('',Validators.required),
     'accountno':new FormControl('',Validators.required),
     'bankname':new FormControl('',Validators.required),

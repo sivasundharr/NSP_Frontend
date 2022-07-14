@@ -44,11 +44,9 @@ export class StudentloginComponent implements OnInit {
         this.router.navigate(['/studenthome']);
         this.successMessage = 'Login Successful.';
       }
-      else{
-        this.invalidLogin = true
-      }
+      
     });
- 
+    this.invalidLogin = true;
     this.loginSuccess = false;
   }
 }

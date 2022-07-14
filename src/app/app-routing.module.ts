@@ -20,6 +20,7 @@ import { MinistryhomeComponent } from './ministryhome/ministryhome.component';
 import { NodalhomeComponent } from './nodalhome/nodalhome.component';
 import { StudentreadmoreComponent } from './studentreadmore/studentreadmore.component';
 import { StudentapplicationministryComponent } from './studentapplicationministry/studentapplicationministry.component';
+import { FormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
   {path:'nodalhome',component:NodalhomeComponent},
   {path:'studentreadmore',component:StudentreadmoreComponent},
   {path:'studentapplicationministry',component:StudentapplicationministryComponent},
+  {path:'FormsModule',component:FormsModule},
   {path:'**',component:PagenotfoundComponent}
 ];
 
