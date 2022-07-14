@@ -2,7 +2,7 @@
 <!---->
 <h1 style="color:black;">STUDENT APPLICATION DETAILS</h1>
 <hr>
-<h3>BASIC DETAILS</h3><br>
+<h3 style="margin-left: 110px;">BASIC DETAILS</h3><br>
 <div class="container" *ngFor="let application of Studentapplication | async">
     <form class="row"> 
         <div class="col-md-10">
@@ -33,28 +33,33 @@
                 <label for="inputEmail" class="form-label">EMAIL : {{application.email}}</label>
             </div>
             <div class="col-md-6">
-                <label for="inputInstituteCode" class="form-label">INSTITUTE CODE : {{application.email}}</label>
+                <label for="inputInstituteCode" class="form-label">INSTITUTE CODE : {{application.institutionCode}}</label>
             </div>
             <div class="col-md-12">
-                <label for="inputAdharNumber" class="form-label">AADHAR NUMBER :</label>
+                <label for="inputAdharNumber" class="form-label">AADHAR NUMBER : {{application.aadhar}}</label>
             </div>
         
             <div class="col-md-8">
-                <label for="inputBankIFSCCode" class="form-label">BANK IFSC CODE :</label>
+                <label for="inputBankIFSCCode" class="form-label">BANK IFSC CODE : {{application.ifsc}}</label>
             </div>
             <div class="col-md-8">
-                <label for="inputBankAccountNumber" class="form-label">BANK ACCOUNT NUMBER :</label>
+                <label for="inputBankAccountNumber" class="form-label">BANK ACCOUNT NUMBER : {{application.accountNo}}</label>
             </div>
             <div class="col-md-8">
-                <label for="inputBankName" class="form-label">BANK NAME :</label>
+                <label for="inputBankName" class="form-label">BANK NAME : {{application.bankName}}</label>
             </div>
             <div class="col-md-8">
-                <label for="password" class="form-label">PASSWORD :</label>
+                <label for="password" class="form-label">PASSWORD : {{application.password}}</label>
             </div>
-            <div>
-                <button class="btn btn-success" (click)="approve(application.aadhar)">APPROVE</button>
-                <button class="btn btn-danger">DENY</button>
+            <div *ngIf='application.status==false'>
+                <button class="btn btn-success" (click)="approve(application)" onclick="window.location.reload();">APPROVE</button>
+                <button class="btn btn-danger" (click)="remove(application)" onclick="window.location.reload();">DENY</button>
+            </div>
+            <div *ngIf='application.status==true'>
+                <button class="btn btn-success">Approved</button>
             </div>
         </div>
     </form>
+    <br>
+    <hr>
 </div> 

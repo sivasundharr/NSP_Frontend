@@ -1,7 +1,7 @@
-import { Nodal } from './nodal';
+import { nodal } from './nodal';
 
 describe('Nodal', () => {
   it('should create an instance', () => {
-    expect(new Nodal()).toBeTruthy();
+    expect(new nodal()).toBeTruthy();
   });
 });

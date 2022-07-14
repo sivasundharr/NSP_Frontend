@@ -20,14 +20,23 @@ export class StudentapplicationsComponent implements OnInit {
     this.reloadData();
   }
   
-  approve(aadhar:string){
-    this.stu.updateStatus(aadhar)
+  approve(application:any){
+    const newData={status:true}
+    this.stu.updateStatus(application,newData)
       .subscribe((data: any) => console.log(data),
         (error: any) => console.log(error));
         this.reloadData();
   }
 
-  
+  remove(application:any){
+    
+    this.stu.deleteStudent(application.aadhar).subscribe(
+      data => {
+        console.log(data);
+      },
+      error => console.log(error));
+      this.reloadData();
+  }
 
   reloadData() {
     this.Studentapplication=this.stu.getapplicationList();

@@ -12,12 +12,17 @@ export class StudentapplicationsService {
   
   }
    getapplicationList(): Observable<any> {
-    return this.myhttp.get(`${this.restURL}ministry/Studentapplicationministry`);
+    return this.myhttp.get(`${this.restURL}studentsinnodal`);
   }
 
-  updateStatus(aadhar:string):Observable<Object>{
+  updateStatus(application:any, newData: any):Observable<Object>{
     
-    return this.myhttp.put(`${this.restURL}ministry/applications/${aadhar}`,true);
+    return this.myhttp.put(`${this.restURL}applications/${application.aadhar}`,newData);
+  }
+
+  deleteStudent(id:String):Observable<any> {
+
+    return this.myhttp.delete(`${this.restURL}deletestudent/${id}`,{responseType:'text'})
   }
   //ShowDetails(email:String)
   //{
