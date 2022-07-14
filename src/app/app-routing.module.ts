@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { StudenthomeComponent } from './studenthome/studenthome.component';
 import { HomeComponent } from './home/home.component';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { InstitutionhomeComponent } from './institutionhome/institutionhome.component';
 import { InstitutionloginComponent } from './institutionlogin/institutionlogin.component';
 import { InstitutionregistrationComponent } from './institutionregistration/institutionregistration.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'home',component:HomeComponent},
   {path:'about',component:AboutComponent},
+  {path:'adminhome',component:AdminhomeComponent},
   {path:'institutionhome',component:InstitutionhomeComponent},
   {path:'institutionlogin',component:InstitutionloginComponent},
   {path:'institutionregistration',component:InstitutionregistrationComponent},
