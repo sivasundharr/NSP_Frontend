@@ -34,8 +34,4 @@ export class StudentapplicationsService {
   getFinalApplicationList(): any {
     return this.myhttp.get(`${this.restURL}ministry/Studentapplicationministry`)
   }
-  //ShowDetails(email:String)
-  //{
-  //  return this.myhttp.get(`${this.restURL}candidate/`+`${email}`);
-  //}
 }
