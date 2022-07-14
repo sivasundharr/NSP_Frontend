@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class StudentapplicationsService {
+  
   restURL: string;
   constructor(private myhttp:HttpClient) {
     this.restURL="http://localhost:8989/"
@@ -20,9 +21,18 @@ export class StudentapplicationsService {
     return this.myhttp.put(`${this.restURL}applications/${application.aadhar}`,newData);
   }
 
+  updateFinalStatus(application:any, newData: any):Observable<Object>{
+    
+    return this.myhttp.put(`${this.restURL}ministry/finalapproval/${application.aadhar}`,newData);
+  }
+
   deleteStudent(id:String):Observable<any> {
 
     return this.myhttp.delete(`${this.restURL}deletestudent/${id}`,{responseType:'text'})
+  }
+
+  getFinalApplicationList(): any {
+    return this.myhttp.get(`${this.restURL}ministry/Studentapplicationministry`)
   }
   //ShowDetails(email:String)
   //{

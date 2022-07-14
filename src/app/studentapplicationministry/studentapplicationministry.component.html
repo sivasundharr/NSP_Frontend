@@ -50,11 +50,11 @@
             <div class="col-md-8">
                 <label for="password" class="form-label">PASSWORD : {{application.password}}</label>
             </div>
-            <div *ngIf='application.status==false'>
-                <button class="btn btn-success" (click)="approve(application)" onclick="window.location.reload();">APPROVE</button>
+            <div *ngIf='application.finalStatus==false'>
+                <button class="btn btn-success" (click)="finalApprove(application)" onclick="window.location.reload();">APPROVE</button>
                 <button class="btn btn-danger" (click)="remove(application)" onclick="window.location.reload();">DENY</button>
             </div>
-            <div *ngIf='application.status==true'>
+            <div *ngIf='application.finalStatus==true'>
                 <button class="btn btn-success">Approved</button>
             </div>
         </div>
