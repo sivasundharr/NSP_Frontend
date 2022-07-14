@@ -21,6 +21,7 @@ import { NodalhomeComponent } from './nodalhome/nodalhome.component';
 import { StudentreadmoreComponent } from './studentreadmore/studentreadmore.component';
 import { StudentapplicationministryComponent } from './studentapplicationministry/studentapplicationministry.component';
 import { FormsModule } from '@angular/forms';
+import { InstitutefinalapprovalComponent } from './institutefinalapproval/institutefinalapproval.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
@@ -46,6 +47,7 @@ const routes: Routes = [
   {path:'studentreadmore',component:StudentreadmoreComponent},
   {path:'studentapplicationministry',component:StudentapplicationministryComponent},
   {path:'FormsModule',component:FormsModule},
+  {path:'institutefinalapproval',component:InstitutefinalapprovalComponent},
   {path:'**',component:PagenotfoundComponent}
 ];
 

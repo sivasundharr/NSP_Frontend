@@ -24,6 +24,7 @@ import { InstituteapplicationsComponent } from './instituteapplications/institut
 import { NodalhomeComponent } from './nodalhome/nodalhome.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { StudentapplicationministryComponent } from './studentapplicationministry/studentapplicationministry.component';
+import { InstitutefinalapprovalComponent } from './institutefinalapproval/institutefinalapproval.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { StudentapplicationministryComponent } from './studentapplicationministr
     InstituteapplicationsComponent,
     NodalhomeComponent,
     PagenotfoundComponent,
-    StudentapplicationministryComponent
+    StudentapplicationministryComponent,
+    InstitutefinalapprovalComponent
   ],
   imports: [
     BrowserModule,

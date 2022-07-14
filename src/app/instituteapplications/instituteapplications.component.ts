@@ -11,11 +11,27 @@ import { StudentapplicationsService } from '../studentapplications.service';
 export class InstituteapplicationsComponent implements OnInit {
 
   instituteapplication:any
-  restURL: string;
   
-  constructor(private inst:InstituteapplicationService,private myRouter:Router) {
-    this.restURL="http://localhost:8989/"
-   }
+  
+  constructor(private inst:InstituteapplicationService,private myRouter:Router) { }
+
+   approve(institute:any){
+    const newData={status:true}
+    this.inst.updateStatus(institute.institutionCode,newData)
+      .subscribe((data: any) => console.log(data),
+        (error: any) => console.log(error));
+        this.reloadData();
+  }
+
+  remove(application:any){
+    
+    this.inst.deleteInstitute(application.id).subscribe(
+      (data: any) => {
+        console.log(data);
+      },
+      (error: any) => console.log(error));
+      this.reloadData();
+  }
    
    ngOnInit(): void {
     this.instituteapplication=this.inst.getapplicationList();

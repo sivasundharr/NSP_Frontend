@@ -68,11 +68,11 @@
         <div> 
             <label for="inputTelephone" class="form-label">TELEPHONE : {{institute.telephone}}</label>
         </div>
-        <div *ngIf='institute.status==false'>
-          <button class="btn btn-success" (click)="approve(institute)" onclick="window.location.reload();">APPROVE</button>
+        <div *ngIf='institute.finalStatus==false'>
+          <button class="btn btn-success" (click)="finalApprove(institute)" onclick="window.location.reload();">APPROVE</button>
           <button class="btn btn-danger" (click)="remove(institute)" onclick="window.location.reload();">DENY</button>
       </div>
-      <div *ngIf='institute.status==true'>
+      <div *ngIf='institute.finalStatus==true'>
           <h2 style="color: green;">Approved</h2>
       </div>
     </form>
