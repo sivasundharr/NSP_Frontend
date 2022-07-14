@@ -18,7 +18,6 @@ import { StudentapplicationsComponent } from './studentapplications/studentappli
 import { NodalofficerComponent } from './nodalofficer/nodalofficer.component';
 import { MinistryhomeComponent } from './ministryhome/ministryhome.component';
 import { NodalhomeComponent } from './nodalhome/nodalhome.component';
-import { StudentreadmoreComponent } from './studentreadmore/studentreadmore.component';
 import { StudentapplicationministryComponent } from './studentapplicationministry/studentapplicationministry.component';
 import { FormsModule } from '@angular/forms';
 import { InstitutefinalapprovalComponent } from './institutefinalapproval/institutefinalapproval.component';
@@ -44,7 +43,6 @@ const routes: Routes = [
   {path:'nodallogin',component:NodalofficerComponent},
   {path:'ministryhome',component:MinistryhomeComponent},
   {path:'nodalhome',component:NodalhomeComponent},
-  {path:'studentreadmore',component:StudentreadmoreComponent},
   {path:'studentapplicationministry',component:StudentapplicationministryComponent},
   {path:'FormsModule',component:FormsModule},
   {path:'institutefinalapproval',component:InstitutefinalapprovalComponent},
