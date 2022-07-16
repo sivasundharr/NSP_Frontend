@@ -1,18 +1,18 @@
 <button class="btn btn-dark" routerLink="/home">Logout</button>
   <div class="basic">
       <h1>SCHOLARSHIP APPLICATION DETAILS</h1>
-      <form class="row g-3" #scholarshipapplicationdetails="ngForm" (ngSubmit)="savescholarshipDetails(scholarshipapplicationdetails)">
+      <form class="row g-3" #scholarshipapplicationdetails="ngForm" ng-controller="validateCtrl" ng-app="studentapp" (ngSubmit)="savescholarshipDetails(scholarshipapplicationdetails)">
         <div class="col-4">
-          <label for="inputEmail" class="form-label">Full Name</label>
-          <input type="text" name="name" class="form-control" id="name" placeholder="" ngModel >
+          <label for="inputname" class="form-label">Full Name</label>
+          <input type="text" name="name" class="form-control" id="name" placeholder="" ngModel>
         </div>
         <div class="col-4">
           <label for="inputEmail" class="form-label">Registered Email</label>
-          <input type="text" name="email" class="form-control" id="email" placeholder="" ngModel >
+          <input type="text" name="email" class="form-control" id="email" placeholder="" ngModel>
         </div>
         <div class="col-4">
           <label for="inputPhoneNo" class="form-label">Registered Phone Number</label>
-          <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" placeholder="" ngModel >
+          <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" placeholder="" ngModel>
         </div>
         <div class="col-md-6">
           <label for="inputAadhar" class="form-label">AADHAR NUMBER</label>
@@ -258,5 +258,3 @@
           </div>  
       </form>
     </div>
-    
-  

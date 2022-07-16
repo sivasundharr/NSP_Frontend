@@ -33,5 +33,4 @@ export class ScholarapplicationComponent implements OnInit {
       }
       )
    }
-
 }
