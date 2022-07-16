@@ -18,12 +18,12 @@ export class StudentapplicationsService {
 
   updateStatus(application:any, newData: any):Observable<Object>{
     
-    return this.myhttp.put(`${this.restURL}applications/${application.aadhar}`,newData);
+    return this.myhttp.put(`${this.restURL}applications/${application.id}`,newData);
   }
 
   updateFinalStatus(application:any, newData: any):Observable<Object>{
     
-    return this.myhttp.put(`${this.restURL}ministry/finalapproval/${application.aadhar}`,newData);
+    return this.myhttp.put(`${this.restURL}ministry/finalapproval/${application.id}`,newData);
   }
 
   deleteStudent(id:String):Observable<any> {
