@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Institution } from '../institution';
 import { InstitutionregistrationService } from '../institutionregistration.service';
 import { student } from '../student';
@@ -13,7 +14,7 @@ import { StudentregistrationService } from '../studentregistration.service';
 })
 export class StudentregistrationComponent implements OnInit {
 
-  constructor(private vhs:StudentregistrationService,myHttp:HttpClient) { }
+  constructor(private myrouter:Router,private vhs:StudentregistrationService,myHttp:HttpClient) { }
 
 
 
@@ -41,7 +42,8 @@ export class StudentregistrationComponent implements OnInit {
       this.student=this.form.value;
       console.log(this.form.value)
       console.log(this.student)
-
+      alert("registration done");
+      this.myrouter.navigate(['/studentlogin']);
       this.vhs.addStudent(this.student).subscribe(
         (data)=>{
           console.warn("submited successfully")

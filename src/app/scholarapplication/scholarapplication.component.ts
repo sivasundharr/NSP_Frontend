@@ -22,11 +22,12 @@ export class ScholarapplicationComponent implements OnInit {
     this.Details=basicDetailsForm.value;
     console.log(basicDetailsForm.value);
     console.log(this.Details);
+    alert("registrationdone");
+    this.myrouter.navigate(['/studenthome']);
     this.bas.addStudent(this.Details).subscribe(
       (data)=>{
         console.log(data);
         console.log("Persisted");
-        alert("Registration done")
       },
       (error)=>{
          console.log(error)
