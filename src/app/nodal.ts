@@ -1,5 +1,5 @@
 export class nodal {
 
-    admin:String|undefined;
+    email:String|undefined;
     password:String|undefined;
 }

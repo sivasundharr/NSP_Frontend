@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { nodal } from '../nodal'
 
 @Component({
@@ -11,38 +11,32 @@ import { nodal } from '../nodal'
 })
 export class NodalofficerComponent implements OnInit {
 
-  nodalId = ''
-  password = ''
+  form:FormGroup
   invalidLogin = false
   errorMessage = 'Invalid Credentials';
   successMessage: string |any;
   loginSuccess = false;
 
-  constructor(private router:Router,private loginService:AuthenticationService) { }
+  constructor(private router:Router,private loginService:AuthenticationService,fb:FormBuilder) {
+    this.form = fb.group({
+      'email':['',Validators.required],
+      'password':['',Validators.required]
+    });
+   }
 
   ngOnInit(): void {
   }
 
-  form=new FormGroup({
-    'nodalId':new FormControl('',Validators.compose([Validators.required])),
-    'password':new FormControl('',Validators.required),
-  })
-
   nodal:nodal=new nodal();
-  checkLogin() {
-      this.nodal=this.form.value;
-      console.log(this.form.value)
-      console.log(this.nodal)
-    let nodal={
-      "nodalId":this.nodalId,
-      "password":this.password
-    }
+  checkLogin(formData) {
 
-    this.loginService.nodallogin(nodal).subscribe((response) => {
+    this.nodal=formData;
+    console.log(this.nodal)
+    this.loginService.nodallogin(this.nodal).subscribe((response) => {
       console.log(response);
       if(response)
       {
-        sessionStorage.setItem('nodalId', this.nodalId)
+        sessionStorage.setItem('nodalId', formData.email);
         this.invalidLogin = false;
         this.loginSuccess = true;
         this.router.navigate(['/nodalhome']);

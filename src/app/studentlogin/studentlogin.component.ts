@@ -1,52 +1,50 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { student } from '../student';
+import { FormBuilder,FormGroup, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-studentlogin',
   templateUrl: './studentlogin.component.html',
   styleUrls: ['./studentlogin.component.css']
 })
 export class StudentloginComponent implements OnInit {
-  email = ''
-  password = ''
+  sloginForm:FormGroup;
+  
   invalidLogin = false
   errorMessage = 'Invalid Credentials';
   successMessage: string |any;
   loginSuccess = false;
 
-  constructor(private router:Router,private loginService:AuthenticationService) { }
+  constructor(private router:Router,private loginService:AuthenticationService,fb:FormBuilder) { 
 
-  ngOnInit(): void {
+    this.sloginForm = fb.group({
+      'email':['',Validators.required],
+      'password':['',Validators.required]
+    })
+
   }
-  form=new FormGroup({
-    'email':new FormControl('',Validators.compose([Validators.email, Validators.required])),
-    'password':new FormControl('',Validators.required),
-  })
-  student:student=new student();
-  checkLogin() {
-      this.student=this.form.value;
-      console.log(this.form.value)
-      console.log(this.student)
-    let student={
-      "email":this.email,
-      "password":this.password
+
+  ngOnInit(): void {}
+  
+  checkLogin(formValue:any) {
+    
+    this.loginService.login(formValue).subscribe((response) => {
+ 
+    if(response)  // response -> true or false
+    {
+      sessionStorage.setItem('email',formValue.email);
+      this.invalidLogin = false;
+      this.loginSuccess = true;
+      this.router.navigate(['/studenthome']);
+      this.successMessage = 'Login Successful.';
     }
 
-    this.loginService.login(student).subscribe((response) => {
-      console.log(response);
-      if(response)
-      {
-        sessionStorage.setItem('email', this.email)
-        this.invalidLogin = false;
-        this.loginSuccess = true;
-        this.router.navigate(['/studenthome']);
-        this.successMessage = 'Login Successful.';
-      }
-      
-    });
-    this.invalidLogin = true;
-    this.loginSuccess = false;
+   
+    
+  });
+
+  this.invalidLogin = true;
+  this.loginSuccess = false;
   }
 }

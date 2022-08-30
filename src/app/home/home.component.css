@@ -25,6 +25,7 @@ ul li{
 }
 .mssg{
     padding-top: 25px;
+    padding-right: 3px;
 }
 #btn1{
     margin-left: 20px;
@@ -39,4 +40,30 @@ ul li{
 }
 .box3{
     padding-top: 20px;
+}
+.bg-warning{
+    margin-top:5px;
+    font-family: roboto;
+}
+.btn-info{
+margin-top:5px;
+}
+.btn-success{
+    margin-top:3px;
+    font-family: georgia;
+}
+h5{
+    font-family:serif;
+
+}
+h6{
+    font-style:italic
+}
+.mssg{
+    background-color: antiquewhite;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+.conn{
+    background-color: antiquewhite;
 }

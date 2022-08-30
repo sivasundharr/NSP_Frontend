@@ -21,10 +21,11 @@ img
     padding-right: 50px;
 }
 .wrapper{
+    width:1300px;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding-left: 32%;
-    padding-right: 28%;
+    padding-left: 25%;
+    padding-right: 24%;
 }
 #lat{
     margin-left: 40px;
@@ -63,4 +64,7 @@ img
 }
 .btn{
     margin-right: 1em;
+ }
+ .bg-info{
+    margin-bottom: 3px;
  }

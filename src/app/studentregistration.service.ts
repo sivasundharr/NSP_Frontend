@@ -9,15 +9,22 @@ export class StudentregistrationService {
 
   response:any;
   constructor(private myhttp:HttpClient) { }
-restURL:string="http://localhost:8989";
-getStudent()
-{
-  return this.myhttp.get(this.restURL+"/registerstudent")
-}
-addStudent(add:student)
-{
-  console.log(add);
-  return this.myhttp.post(this.restURL+"/registerstudent",add)
-}
+  restURL:string="http://localhost:8087";
+  
+  getStudent()
+  {
+    return this.myhttp.get(`${this.restURL}/student`)
+  }
+  addStudent(studentData:any)
+  {
+    console.log("add student");
+    console.log(studentData);
+    return this.myhttp.post(`${this.restURL}/student`,studentData)
+  }
+
+  addBankDetailsForStudent(bankData:any){
+    console.log("inside bank");
+    return this.myhttp.post(`${this.restURL}/bank-details`,bankData);
+  }
 
 }

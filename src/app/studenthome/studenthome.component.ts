@@ -11,12 +11,12 @@ import { StudenthomeService } from '../studenthome.service';
 export class StudenthomeComponent implements OnInit {
 
   constructor(private stu:StudenthomeService,private myRouter:Router) { }
-username:any;
-studentData:any;
+  useremail:any;
+  studentData:any;
   ngOnInit(): void 
   {
-    this.username=sessionStorage.getItem("email");
-    this.stu.ShowDetails(this.username).subscribe(
+    this.useremail=sessionStorage.getItem("email");
+    this.stu.ShowDetails(this.useremail).subscribe(
       (data)=>{
         console.log(data);
         this.studentData=data;

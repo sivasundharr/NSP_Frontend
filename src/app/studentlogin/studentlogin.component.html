@@ -1,26 +1,28 @@
 <div class="container login-container">
     <div class="row">
     <div class="shadow p-3 mb-5 bg-body rounded">
+        <div class="conn">
         <div class="row">
             <h2>STUDENT LOGIN</h2>
-            <form [formGroup]="form" class="row g-3" (ngSubmit)="checkLogin()" ngNativeValidate>
+            <form [formGroup]="sloginForm" class="row g-3" (ngSubmit)="checkLogin(sloginForm.value)" ngNativeValidate>
                 <div class="alert alert-warning"*ngIf='invalidLogin'>{{errorMessage}}</div>
                 <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
                 <div class="col-4">
-                    <label for="email" class="form-label">Registered Email</label>
-                    <input formControlName="email" type="text" class="form-control" [(ngModel)]="email" name="email" placeholder="Enter email" >
+                    <label for="email" class="form-label">Enter Email</label>
+                    <input [formControl]="sloginForm.controls['email']" type="email" class="form-control">
                 </div>
                 <div class="col-4">
-                    <label for="inputPassword" class="form-label">Password</label>
-                    <input formControlName="password" type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="enter password" >
+                    <label for="inputPassword" class="form-label">Enter Password</label>
+                    <input [formControl]="sloginForm.controls['password']" type="password" class="form-control">
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="login-btn btn btn-success" value="login" [disabled]="form.invalid">Login</button>
+                    <button type="submit" class="login-btn btn btn-success" value="login" [disabled]="sloginForm.invalid">Login</button>
                 </div>
                 <div class="col-12">
                     <a href="#" class="ForgetPwd">Forget Password?</a>
                 </div>
             </form>
+        </div>
         </div>    
         </div>  
     </div>
